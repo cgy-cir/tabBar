@@ -2,20 +2,15 @@
   <div>
     <p>用户</p>
     <p>{{id}}</p>
+    <p>{{$route.name}}</p>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      a: 123
-    };
+    return {};
   },
-  computed: {
-    id() {
-      return this.$route.params.id;
-    }
-  }
+  props: ["id"]
 };
 </script>

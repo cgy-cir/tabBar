@@ -6,6 +6,10 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '',
+    redirect: 'About'
+  }
+  , {
     path: '/home',
     name: 'Home',
     component: Home
@@ -19,6 +23,7 @@ const routes = [
     path: '/user/:id',
     name: 'User',
     component: User,
+    props: true
   }
 ]
 
