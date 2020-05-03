@@ -1,27 +1,23 @@
 <template>
   <div id="app">
-    <router-link to="/home">首页</router-link>
-    <router-link to="/about">关于</router-link>
-    <!-- <router-link :to="userRouter">用户</router-link> -->
-    <button @click="userClick">用户</button>
-    <router-view />
+    <router-view></router-view>
+    <tab-bar></tab-bar>
   </div>
 </template>
 
 <script>
+import TabBar from "./components/TabBar/TabBar";
+
 export default {
   data() {
-    return {
-      name: "cgy"
-    };
+    return {};
   },
-  methods: {
-    userClick() {
-      this.$router.push("/user/" + this.name);
-    }
+  components: {
+    TabBar
   }
 };
 </script>
 
-<style>
+<style scope>
+@import "./assets/css/base.css";
 </style>
